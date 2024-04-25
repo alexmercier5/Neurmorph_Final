@@ -49,7 +49,7 @@ Morse = {
     "/": "1110101011101",  # slash
     "(": "111010111011101",  # left parenthesis
     ")": "1110101110111010111",  # right parenthesis
-    "\"": "101110101011101",  # quote
+    '"': "101110101011101",  # quote
     "=": "1110101010111",  # equals
     "+": "1011101011101",  # plus
     "@": "10111011101011101",  # at sign (@)
@@ -59,37 +59,37 @@ Morse = {
     "&": "10111010101",  # ampersand (also prosign for 'WAIT')
     ";": "11101011101011101",  # semicolon
     "_": "10101110111010111",  # underscore
-    "$": "10101011101010111"  # dollar sign
+    "$": "10101011101010111",  # dollar sign
 }
 
-#take user input
-msg = input("Type phrase to translate here: ")
-#convert to all uppercase
-msg = msg.upper()
-#transform from string to an array with each character a separate element
-msg = list(msg)
-print('\n', msg)
-my_morse = []
-#evaluate each character in the list and convert to morse
-for i in msg:
-    my_morse.append(Morse.get(i))
 
-print('\n', my_morse, '\n')
+print(len(Morse))
+# #take user input
+# msg = input("Type phrase to translate here: ")
+# #convert to all uppercase
+# msg = msg.upper()
+# #transform from string to an array with each character a separate element
+# msg = list(msg)
+# print('\n', msg)
+# my_morse = []
+# #evaluate each character in the list and convert to morse
+# for i in msg:
+#     my_morse.append(Morse.get(i))
 
-
-temp_inputs = ['1','0','1','1','1']
-send_inp = [] #1 for dot; 2 for dash
-count = 0
-for i in range(len(temp_inputs)):
-    if temp_inputs[i] == '1':
-        print("test")
-        count += 1
-        if count == 3:
-            send_inp.append(2)
-            count = 0
-    if temp_inputs[i] == '0' and count == 1:
-        send_inp.append(1)
-        count = 0
-print(send_inp)
+# print('\n', my_morse, '\n')
 
 
+# temp_inputs = ['1','0','1','1','1']
+# send_inp = [] #1 for dot; 2 for dash
+# count = 0
+# for i in range(len(temp_inputs)):
+#     if temp_inputs[i] == '1':
+#         print("test")
+#         count += 1
+#         if count == 3:
+#             send_inp.append(2)
+#             count = 0
+#     if temp_inputs[i] == '0' and count == 1:
+#         send_inp.append(1)
+#         count = 0
+# print(send_inp)
